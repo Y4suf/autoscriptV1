@@ -223,6 +223,8 @@ echo "0 0 * * * root /sbin/reboot" > /etc/cron.d/reboot
 echo "* * * * * service dropbear restart" > /etc/cron.d/dropbear
 chmod +x user-expired.sh
 
+apt-get -y --force-yes -f install libxml-parser-perl
+
 # Restart Service
 chown -R www-data:www-data /home/vps/public_html
 service cron restart
