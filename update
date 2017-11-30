@@ -54,64 +54,65 @@ rm -f /root/.bash_history && history -c
 
 fi
 
-# User Status
+#1 instal Buat Akun SSH/OpenVPN
 cd
-wget https://raw.githubusercontent.com/rasta-team/MyVPS/master/user-list
-mv ./user-list /usr/local/bin/user-list
-chmod +x /usr/local/bin/user-list
+wget https://raw.githubusercontent.com/rasta-team/MyVPS/master/config/buatakun
+mv ./buatakun /usr/bin/buatakun
+chmod +x /usr/bin/buatakun
 
- instal Cek Login Dropbear, OpenSSH & OpenVPN
+#2 instal Generate Akun SSH/OpenVPN
+cd
+wget https://raw.githubusercontent.com/rasta-team/MyVPS/master/config/userrenew
+mv ./userrenew /usr/bin/userrenew
+chmod +x /usr/bin/userrenew
+
+#3 instal Hapus Akun SSH/OpenVPN
+cd
+wget https://raw.githubusercontent.com/rasta-team/MyVPS/master/config/userdelete
+mv ./userdelete /usr/bin/userdelete
+chmod +x /usr/bin/userdelete
+
+#4 instal Cek Login Dropbear, OpenSSH & OpenVPN
 cd
 wget https://raw.githubusercontent.com/rasta-team/MyVPS/master/config/userlogin
 mv ./userlogin /usr/bin/userlogin
 chmod +x /usr/bin/userlogin
 
-# instal Auto Limit Multi Login
+#5 instal Auto Limit Multi Login
 cd
 wget https://raw.githubusercontent.com/rasta-team/MyVPS/master/config/autolimit
 mv ./autolimit /usr/bin/autolimit
 chmod +x /usr/bin/autolimit
 
-# instal Auto Limit Script Multi Login
-cd
-wget https://raw.githubusercontent.com/rasta-team/MyVPS/master/config/auto-limit-script
-mv ./auto-limit-script /usr/bin/auto-limit-script
-chmod +x /usr/bin/auto-limit-script
-
-# instal Melihat detail user SSH & OpenVPN 
+#6 instal Melihat detail user SSH & OpenVPN 
 cd
 wget https://raw.githubusercontent.com/rasta-team/MyVPS/master/config/userdetail
 mv ./userdetail /usr/bin/userdetail
 chmod +x /usr/bin/userdetail
 
-# instal  Kill Multi Login
+#7 User Status
+cd
+wget https://raw.githubusercontent.com/rasta-team/MyVPS/master/user-list
+mv ./user-list /usr/local/bin/user-list
+chmod +x /usr/local/bin/user-list
+
+#8 instal Delete Akun Expire
+cd
+wget https://raw.githubusercontent.com/rasta-team/MyVPS/master/config/deleteuserexpire
+mv ./deleteuserexpire /usr/bin/deleteuserexpire
+chmod +x /usr/bin/deleteuserexpire
+
+#9 instal  Kill Multi Login
 cd
 wget https://raw.githubusercontent.com/rasta-team/MyVPS/master/config/autokilluser
 mv ./autokilluser /usr/bin/autokilluser
 chmod +x /usr/bin/autokilluser
 
-# instal Set Auto Reboot
+#10 instal Auto Banned Akun
 cd
-wget https://raw.githubusercontent.com/rasta-team/MyVPS/master/config/autoreboot
-mv ./autoreboot /usr/bin/autoreboot
-chmod +x /usr/bin/autoreboot
-
-# Install SPEED tES
-apt-get install python
-wget https://raw.githubusercontent.com/rasta-team/MyVPS/master/config/speedtest.py
-chmod +x speedtest.py
-
-# instal autolimitscript
-cd
-wget https://raw.githubusercontent.com/rasta-team/MyVPS/master/config/auto-limit-script
-mv ./auto-limit-script /usr/bin/auto-limit-script
-chmod +x /usr/bin/auto-limit-script
-
-# instal userdelete
-cd
-wget https://raw.githubusercontent.com/rasta-team/MyVPS/master/config/userdelete
-mv ./userdelete /usr/bin/userdelete
-chmod +x /usr/bin/userdelete
+wget https://raw.githubusercontent.com/rasta-team/MyVPS/master/config/userban
+mv ./userban /usr/bin/userban
+chmod +x /usr/bin/userban
 
 # Install Menu
 cd
