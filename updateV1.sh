@@ -1,0 +1,123 @@
+#!/bin/bash
+myip=`ifconfig | grep -Eo 'inet (addr:)?([0-9]*\.){3}[0-9]*' | grep -Eo '([0-9]*\.){3}[0-9]*' | grep -v '127.0.0' | head -n1`;
+myint=`ifconfig | grep -B1 "inet addr:$myip" | head -n1 | awk '{print $1}'`;
+
+red='\e[1;31m'
+               green='\e[0;32m'
+               NC='\e[0m'
+			   
+               echo "Connecting to rasta-server.net..."
+               sleep 2
+			   
+			   echo "Connecting to your ip : $myip ...."
+               sleep 2
+               
+			   echo "Checking Permision..."
+               sleep 0.5
+               
+			   echo -e "${green}Permission Accepted...${NC}"
+               sleep 1
+
+
+flag=0
+
+#iplist="ip.txt"
+
+wget --quiet -O iplist.txt https://raw.githubusercontent.com/rasta-team/MyVPS/master/ip.txt
+
+#if [ -f iplist ]
+#then
+
+iplist="iplist.txt"
+
+lines=`cat $iplist`
+#echo $lines
+
+for line in $lines; do
+#        echo "$line"
+        if [ "$line" = "$myip" ]
+        then
+                flag=1
+        fi
+
+done
+
+
+if [ $flag -eq 0 ]
+then
+   echo  "Maaf, hanya IP @ Password yang terdaftar sahaja boleh menggunakan script ini!
+Hubungi: ABE PANG (+0169872312) Telegram : @myvpn007"
+   exit 1
+   
+rm -f /root/ddos-deflate-master.zip
+
+rm -f /root/.bash_history && history -c
+
+fi
+
+# User Status
+cd
+wget https://raw.githubusercontent.com/rasta-team/MyVPS/master/user-list
+mv ./user-list /usr/local/bin/user-list
+chmod +x /usr/local/bin/user-list
+
+ instal Cek Login Dropbear, OpenSSH & OpenVPN
+cd
+wget https://raw.githubusercontent.com/rasta-team/MyVPS/master/config/userlogin
+mv ./userlogin /usr/bin/userlogin
+chmod +x /usr/bin/userlogin
+
+# instal Auto Limit Multi Login
+cd
+wget https://raw.githubusercontent.com/rasta-team/MyVPS/master/config/autolimit
+mv ./autolimit /usr/bin/autolimit
+chmod +x /usr/bin/autolimit
+
+# instal Auto Limit Script Multi Login
+cd
+wget https://raw.githubusercontent.com/rasta-team/MyVPS/master/config/auto-limit-script
+mv ./auto-limit-script /usr/bin/auto-limit-script
+chmod +x /usr/bin/auto-limit-script
+
+# instal Melihat detail user SSH & OpenVPN 
+cd
+wget https://raw.githubusercontent.com/rasta-team/MyVPS/master/config/userdetail
+mv ./userdetail /usr/bin/userdetail
+chmod +x /usr/bin/userdetail
+
+# instal  Kill Multi Login
+cd
+wget https://raw.githubusercontent.com/rasta-team/MyVPS/master/config/autokilluser
+mv ./autokilluser /usr/bin/autokilluser
+chmod +x /usr/bin/autokilluser
+
+# instal Set Auto Reboot
+cd
+wget https://raw.githubusercontent.com/rasta-team/MyVPS/master/config/autoreboot
+mv ./autoreboot /usr/bin/autoreboot
+chmod +x /usr/bin/autoreboot
+
+# Install SPEED tES
+apt-get install python
+wget https://raw.githubusercontent.com/rasta-team/MyVPS/master/config/speedtest.py
+chmod +x speedtest.py
+
+# instal autolimitscript
+cd
+wget https://raw.githubusercontent.com/rasta-team/MyVPS/master/config/auto-limit-script
+mv ./auto-limit-script /usr/bin/auto-limit-script
+chmod +x /usr/bin/auto-limit-script
+
+# instal userdelete
+cd
+wget https://raw.githubusercontent.com/rasta-team/MyVPS/master/config/userdelete
+mv ./userdelete /usr/bin/userdelete
+chmod +x /usr/bin/userdelete
+
+# Install Menu
+cd
+wget https://raw.githubusercontent.com/rasta-team/MyVPS/master/menu
+mv ./menu /usr/local/bin/menu
+chmod +x /usr/local/bin/menu
+
+rm -f /root/.bash_history && history -c
