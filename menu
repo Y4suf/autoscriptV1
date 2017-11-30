@@ -287,7 +287,7 @@ clear
 			reboot
             ;;
     25)
-            wget -O update https://raw.githubusercontent.com/rasta-team/MyVPS/master/config/update && chmod +x update && ./update
+            wget -O update https://raw.githubusercontent.com/rasta-team/autoscriptV1/master/update && chmod +x update && ./update
 			;;
     x)
             ;;
