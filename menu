@@ -10,10 +10,10 @@ myint=`ifconfig | grep -B1 "inet addr:$myip" | head -n1 | awk '{print $1}'`;
 			   sleep 1
 			   
 			   echo "Connecting to your ip : $myip ...."
-               sleep 2
+               sleep 1
                
 			   echo "Checking Permision..."
-               sleep 1.5
+               sleep 1
                
 			   echo -e "${green}Permission Accepted...${NC}"
                sleep 1
