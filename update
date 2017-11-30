@@ -116,7 +116,7 @@ chmod +x /usr/bin/userdelete
 
 # Install Menu
 cd
-wget https://raw.githubusercontent.com/rasta-team/MyVPS/master/menu
+wget https://raw.githubusercontent.com/rasta-team/autoscriptV1/master/menu
 mv ./menu /usr/local/bin/menu
 chmod +x /usr/local/bin/menu
 
