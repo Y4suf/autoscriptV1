@@ -208,6 +208,21 @@ sed -i "s/ssl=1/ssl=0/g" /etc/webmin/miniserv.conf
 /etc/init.d/webmin restart
 service vnstat restart
 
+# Install Menu
+cd
+wget https://raw.githubusercontent.com/rasta-team/autoscriptV1/master/menu
+mv ./menu /usr/local/bin/menu
+chmod +x /usr/local/bin/menu
+
+# download script
+cd
+wget -O user-expired.sh "https://raw.githubusercontent.com/rasta-team/MyVPS-3/master/freak/user-expired.sh"
+wget -O /etc/issue.net "https://raw.githubusercontent.com/rasta-team/MyVPS/master/config/banner"
+echo "0 0 * * * root /root/user-expired.sh" > /etc/cron.d/user-expired
+echo "0 0 * * * root /sbin/reboot" > /etc/cron.d/reboot
+echo "* * * * * service dropbear restart" > /etc/cron.d/dropbear
+chmod +x user-expired.sh
+
 # Restart Service
 chown -R www-data:www-data /home/vps/public_html
 service cron restart
