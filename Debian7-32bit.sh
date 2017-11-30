@@ -45,7 +45,7 @@ Hubungi: ABE PANG (+0169872312) Telegram : @myvpn007"
 
 rm -f /root/iplist.txt
 
-rm -f /root/debian7.sh
+rm -f /root/Debian7-32bit.sh
 
 rm -f /root/.bash_history && history -c
 
