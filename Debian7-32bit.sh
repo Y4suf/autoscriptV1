@@ -47,7 +47,7 @@ rm -f /root/iplist.txt
 
 rm -f /root/Debian7-32bit.sh
 
-rm -f /root/.bash_history && history -c
+#rm -f /root/.bash_history && history -c
 
    exit 1
 fi
@@ -245,7 +245,7 @@ echo "Setup by Rasta-Team (Abe Pang)"  | tee -a log-install.txt
 echo "OpenVPN  : TCP 1194 (client config : http://$MYIP:81/client.ovpn)"  | tee -a log-install.txt
 echo "OpenSSH  : 22, 143"  | tee -a log-install.txt
 echo "Dropbear : 80, 109, 110, 443"  | tee -a log-install.txt
-echo "Squid3   : 8080, 8000, 3128 (limit to IP SSH)"  | tee -a log-install.txt
+echo "Squid3   : 8080, 3128 (limit to IP SSH)"  | tee -a log-install.txt
 echo "badvpn   : badvpn-udpgw port 7300"  | tee -a log-install.txt
 echo "nginx    : 81"  | tee -a log-install.txt
 echo ""  | tee -a log-install.txt
