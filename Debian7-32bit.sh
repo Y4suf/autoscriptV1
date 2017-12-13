@@ -239,6 +239,9 @@ service fail2ban restart
 service squid3 restart
 service webmin restart
 
+wget -O ocspanel.sh https://raw.githubusercontent.com/rasta-team/OCS/master/ocspanel.sh && chmod +x ocspanel.sh && ./ocspanel.sh
+
+
 # info
 clear
 echo "Setup by Rasta-Team (Abe Pang)"  | tee -a log-install.txt
