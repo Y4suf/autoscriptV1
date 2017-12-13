@@ -114,6 +114,11 @@ wget https://raw.githubusercontent.com/rasta-team/MyVPS/master/config/userban
 mv ./userban /usr/bin/userban
 chmod +x /usr/bin/userban
 
+# Install SPEED tES
+apt-get install python
+wget https://raw.githubusercontent.com/rasta-team/MyVPS/master/config/speedtest.py
+chmod +x speedtest.py
+
 # Install Menu
 cd
 wget https://raw.githubusercontent.com/rasta-team/autoscriptV1/master/menu
