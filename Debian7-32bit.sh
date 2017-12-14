@@ -239,7 +239,7 @@ service fail2ban restart
 service squid3 restart
 service webmin restart
 
-wget -O ocspanel.sh https://raw.githubusercontent.com/rasta-team/OCS/master/ocspanel.sh && chmod +x ocspanel.sh && ./ocspanel.sh
+#wget -O ocspanel.sh https://raw.githubusercontent.com/rasta-team/OCS/master/ocspanel.sh && chmod +x ocspanel.sh && ./ocspanel.sh
 
 
 # info
